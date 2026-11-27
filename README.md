@@ -1,6 +1,6 @@
 # AI Chatbot
 
-React chatbot powered by the Google Gemini API (`gemini-3.6-flash`, `gemini-3.5-flash-lite`, `gemini-3.1-flash-lite`) with automatic model fallback.
+Interactive React AI chatbot application with automatic model fallback.
 
 ## Scripts
 

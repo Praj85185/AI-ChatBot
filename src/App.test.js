@@ -10,10 +10,12 @@ describe('AI Chatbot & askLLM', () => {
     jest.resetAllMocks();
   });
 
-  test('renders AI Chatbot interface', () => {
+  test('renders production AI Chatbot interface with sidebar and starter prompts', () => {
     render(<App />);
     expect(screen.getByText(/AI Chatbot/i)).toBeInTheDocument();
+    expect(screen.getByText(/How can I help you today\?/i)).toBeInTheDocument();
     expect(screen.getByPlaceholderText(/Ask a question/i)).toBeInTheDocument();
+    expect(screen.getByRole('button', { name: /\+ New Chat/i })).toBeInTheDocument();
   });
 
   test('askLLM returns answer from the first working model', async () => {
